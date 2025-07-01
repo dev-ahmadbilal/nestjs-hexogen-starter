@@ -1,98 +1,215 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# NestJS Hexogen Starter
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+[![Star][star-img]][repo-url]
+[![License][license-img]][license-url]
+[![PRs Welcome][pr-img]][repo-url]
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+> 🧱 A minimal NestJS starter project pre-configured for use with [Hexogen](https://www.npmjs.com/package/hexogen) — the CLI tool for lightning-fast, production-grade, hexagonal CRUD API generation.
 
-## Description
+---
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## ✨ What Is This?
 
-## Project setup
+This is a boilerplate NestJS project built for rapid prototyping using the Hexogen CLI. It comes pre-integrated with the required dependencies like:
 
-```bash
-$ npm install
-```
+* ✅ TypeORM with PostgreSQL (production-ready)
+* ✅ Swagger/OpenAPI setup
+* ✅ DTO validation (class-validator & class-transformer)
+* ✅ Prettier for formatting
+* ✅ Reflect metadata support
+* ✅ Migration system
 
-## Compile and run the project
+Use it to instantly scaffold modules with Hexogen and build a production-grade backend using hexagonal architecture — without worrying about initial setup.
 
-```bash
-# development
-$ npm run start
+---
 
-# watch mode
-$ npm run start:dev
+## 📦 What's Inside
 
-# production mode
-$ npm run start:prod
-```
+* ✅ NestJS setup with core structure (AppModule, AppController, etc.)
+* ✅ Swagger setup (automatically detects routes & DTOs)
+* ✅ TypeORM integration with PostgreSQL
+* ✅ Global validation pipe
+* ✅ Prettier setup for formatting
+* ✅ Reflect metadata for decorators
+* ✅ Migration system with CLI commands
+* ✅ Environment-based configuration
+* ✅ Ready to work with Hexogen out-of-the-box
 
-## Run tests
+---
+
+## 🚀 Quick Start
+
+1. Clone the repo
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+git clone https://github.com/dev-ahmadbilal/nestjs-hexogen-starter.git
+cd nestjs-hexogen-starter
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+2. Install dependencies
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+3. Set up environment variables
 
-## Resources
+Copy the sample environment file and update the values:
 
-Check out a few resources that may come in handy when working with NestJS:
+```bash
+cp env.sample .env
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Then edit `.env` with your database credentials.
 
-## Support
+4. Set up PostgreSQL database
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+# Create database
+createdb nestjs_hexogen_starter
+```
 
-## Stay in touch
+5. Run migrations
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```bash
+npm run migration:run
+```
 
-## License
+6. Install Hexogen CLI
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+```bash
+npm install -g hexogen
+```
+
+7. Run the dev server
+
+```bash
+npm run start:dev
+```
+
+8. Visit Swagger Docs
+
+```
+http://localhost:3000/docs
+```
+
+9. Generate a module using Hexogen!
+
+```bash
+hexogen resource User
+```
+
+10. That's it — your hexagonal module is now live.
+
+---
+
+## 📂 Directory Structure
+
+```
+nestjs-hexogen-starter/
+├── src/
+│   ├── app.module.ts
+│   ├── main.ts
+│   ├── config/
+│   │   └── database.config.ts
+│   └── users/                    <-- Example hexagonal module
+│       ├── domain/
+│       ├── dto/
+│       ├── infrastructure/
+│       │   └── persistence/
+│       │       └── relational/
+│       │           ├── entities/
+│       │           │   └── user.entity.ts
+│       │           └── repositories/
+│       └── users.module.ts
+├── migrations/                   <-- Database migrations
+├── typeorm.config.ts            <-- TypeORM CLI config
+├── .prettierrc
+├── tsconfig.json
+└── ...
+```
+
+---
+
+## ⚙️ Project Configuration
+
+* **Database**: PostgreSQL with TypeORM
+* **Configuration**: Environment-based with fallback defaults
+* **Swagger path**: `/api`
+* **Global Validation**: Enabled with whitelist + transform
+* **Prettier**: `.prettierrc` config is included
+* **Reflect Metadata**: Already imported in `main.ts`
+
+---
+
+## 🧪 Example Usage
+
+Once you've created a module with:
+
+```bash
+hexogen resource Product
+```
+
+You can visit:
+
+* DTOs in: `src/product/dto`
+* Entity: `src/product/infrastructure/persistence/relational/entities`
+* Service, Controller, etc.: `src/product`
+
+Swagger will automatically expose routes and DTO schemas under `/docs`.
+
+---
+
+## 🤖 Schema-Driven Generation
+
+Use a schema file instead of interactive CLI:
+
+```bash
+hexogen resource --schema ./schemas/user.json
+```
+
+Example schema:
+
+```json
+{
+  "name": "User",
+  "isAddTestCase": true,
+  "functionalities": ["create", "findAll", "findOne", "update", "delete"],
+  "fields": [
+    {
+      "name": "email",
+      "optional": false,
+      "type": "varchar",
+      "dto": true
+    }
+  ]
+}
+```
+
+---
+
+## 🤝 Contributing
+
+PRs welcome! This starter project aims to stay minimal and well-structured.
+
+---
+
+## 📄 License
+
+MIT © Ahmad Bilal
+
+---
+
+## 🙋 Support
+
+For issues and discussions, head over to:
+
+👉 [Hexogen GitHub](https://github.com/dev-ahmadbilal/hexogen)
+
+---
+
+[star-img]: https://img.shields.io/github/stars/dev-ahmadbilal/nestjs-hexogen-starter?style=social
+[repo-url]: https://github.com/dev-ahmadbilal/nestjs-hexogen-starter
+[license-img]: https://img.shields.io/github/license/dev-ahmadbilal/nestjs-hexogen-starter
+[license-url]: https://github.com/dev-ahmadbilal/nestjs-hexogen-starter/blob/main/LICENSE
+[pr-img]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
